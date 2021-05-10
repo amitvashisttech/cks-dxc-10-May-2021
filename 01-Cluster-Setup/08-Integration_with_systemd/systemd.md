@@ -1,6 +1,6 @@
 #### Create env variable:
 ```sh
-export SERVER_IP=172.16.16.99
+export SERVER_IP=172.31.0.100
 ```
 #### systemd file for etcd:
 ```sh
