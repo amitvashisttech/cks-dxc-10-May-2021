@@ -26,7 +26,7 @@ openssl x509 -req -in apiserver-etcd-client.csr -CA ca.crt -CAkey ca.key -CAcrea
 ```
 #### Step 2 - Start kube-apiserver:
 ```sh
-/usr/local/bin/kube-apiserver --advertise-address=143.110.250.107 --etcd-cafile=/root/certificates/ca.crt --etcd-certfile=/root/certificates/apiserver-etcd-client.crt --etcd-keyfile=/root/certificates/apiserver-etcd-client.key --etcd-servers=https://127.0.0.1:2379
+/usr/local/bin/kube-apiserver --advertise-address=${HOST_IPADDRESS} --etcd-cafile=/root/certificates/ca.crt --etcd-certfile=/root/certificates/apiserver-etcd-client.crt --etcd-keyfile=/root/certificates/apiserver-etcd-client.key --etcd-servers=https://127.0.0.1:2379
 ```
 Let us now verify if things are working as expected:
 ```sh
