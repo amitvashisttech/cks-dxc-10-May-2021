@@ -41,7 +41,7 @@ apt-get install -y kubelet=1.19.4-00 kubeadm=1.19.4-00 kubectl=1.19.4-00
 ```
 #### Step 4: Initialize Cluster with kubeadm
 ```sh
-kubeadm init --pod-network-cidr=10.244.0.0/16
+kubeadm init --pod-network-cidr=10.244.0.0/16  --apiserver-advertise-address={MASTER_IP_ADDRESS} 
 ```
 ```sh
 mkdir -p $HOME/.kube
